@@ -9,18 +9,20 @@
               or return False in case it can't
 """
 
+
 def canUnlockAll(boxes):
     if boxes is None or len(boxes) <= 0:
         return False
     if len(boxes) == 1:
         return True
-    keys = {0} 
+    keys = {0}
     counter = 0
     while counter < len(boxes):
         for i in range(len(boxes)):
             if i in keys:
                 for key in boxes[i]:
-                   keys.add(key)
+                    if key <= len(boxes) - 1:
+                        keys.add(key)
         counter += 1
     if len(keys) == len(boxes):
         return True

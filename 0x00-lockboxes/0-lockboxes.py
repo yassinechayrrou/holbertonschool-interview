@@ -14,23 +14,16 @@ def canUnlockAll(boxes):
 
     if boxes is None or len(boxes) <= 0:
         return False
-    if len(boxes) == 1 and type(boxes[0]) is list:
-        return True
     keys = {0}
     counter = 0
-    test = []
-    for elem in boxes:
-        if type(elem) is list:
-            test.append(elem)
-    print(test)
-    while counter <= len(test):
-        for i in range(len(test)):
+    while counter <= len(boxes):
+        for i in range(len(boxes)):
             if i in keys:
-                for key in test[i]:
-                    if key < len(test):
+                for key in boxes[i]:
+                    if key < len(boxes):
                         keys.add(key)
         counter += 1
-    if len(keys) == len(test):
+    if len(keys) == len(boxes):
         return True
     else:
         return False

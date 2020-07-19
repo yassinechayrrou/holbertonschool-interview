@@ -14,6 +14,8 @@ def canUnlockAll(boxes):
 
     if boxes is None or len(boxes) <= 0:
         return False
+    if type(boxes) is not list:
+        return False
     keys = {0}
     counter = 0
     while counter <= len(boxes):

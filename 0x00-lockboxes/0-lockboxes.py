@@ -11,12 +11,17 @@
 
 
 def canUnlockAll(boxes):
+
     if boxes is None or len(boxes) <= 0:
         return False
     if len(boxes) == 1:
         return True
     keys = {0}
     counter = 0
+    for parasite in boxes[:]:
+        if type(parasite) is not list:
+            boxes.remove(parasite)
+    print(boxes)
     while counter <= len(boxes):
         for i in range(len(boxes)):
             if i in keys:

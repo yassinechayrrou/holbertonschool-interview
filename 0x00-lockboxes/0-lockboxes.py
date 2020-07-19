@@ -21,7 +21,7 @@ def canUnlockAll(boxes):
         for i in range(len(boxes)):
             if i in keys:
                 for key in boxes[i]:
-                    if key <= len(boxes) - 1:
+                    if key <= len(boxes) - 1 and key is int:
                         keys.add(key)
         counter += 1
     if len(keys) == len(boxes):

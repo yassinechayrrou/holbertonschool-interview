@@ -19,17 +19,12 @@ def canUnlockAll(boxes):
     for z in boxes:
         if type(z) is not list:
             boxes.remove(z)
-    opened = set() 
-    opened.add(0)
-    stack = []
-    stack.append(0)
+    opened = {0} 
+    stack = [0]
     while stack:
-        i = stack.pop()
-        keys = boxes[i]
+        keys = boxes[stack.pop()]
         for key in keys:
-            if key not in opened:
+            if key not in opened and key < len(boxes):
                 opened.add(key)
                 stack.append(key)
-    if len(opened) == len(boxes)
-        return True
-    False
+    return len(boxes) == len(opened)

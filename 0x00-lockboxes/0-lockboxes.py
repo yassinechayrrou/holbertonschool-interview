@@ -16,6 +16,9 @@ def canUnlockAll(boxes):
         return False
     if type(boxes) is not list:
         return False
+    for z in boxes:
+        if type(z) is not list:
+            boxes.remove(z)
     keys = {0}
     counter = 0
     while counter <= len(boxes):

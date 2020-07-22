@@ -39,5 +39,5 @@ return (newNode);
 }
 searchNode = searchNode->next;
 }
-return (newNode);
+return (NULL);
 }

@@ -9,16 +9,16 @@ listint_t *insert_node(listint_t **head, int number)
 {
 listint_t *newNode, *searchNode;
 
-if (head == NULL)
+if (!head)
 return (NULL);
 searchNode = *head;
 newNode = malloc(sizeof(listint_t));
 newNode->n = number;
 newNode->next = NULL;
-if (*head == NULL)
+if (!searchNode)
 {
 *head = newNode;
-return (*head)
+return (newNode);
 }
 while (searchNode)
 {

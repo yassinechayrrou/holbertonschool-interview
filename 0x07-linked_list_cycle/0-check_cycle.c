@@ -1,27 +1,27 @@
 #include "lists.h"
 /**
-  *check_cycle - checks if there is a cycle in a Linked list
+  *check_cycle - checks if there is a cycle in LL using floyd's algorithm
   *@list: pointer to a node of a Linked list
   *Return: 0 or 1
   */
 int check_cycle(listint_t *list)
 {
-	listint_t *f_pointer = NULL;
-	listint_t *s_pointer = NULL;
+	listint_t *fp = NULL;
+	listint_t *sp = NULL;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
-	s_pointer = list;
-	f_pointer = list->next;
+	sp = list;
+	fp = list->next;
 
-	while (f_pointer && f_pointer->next && s_pointer)
+	while (fp && fp->next && sp)
 	{
-		if (s_pointer == f_pointer)
+		if (sp == fp)
 		{
 			return (1);
 		}
-		s_pointer = s_pointer->next;
-		f_pointer = f_pointer->next->next;
+		sp = sp->next;
+		fp = fp->next->next;
 
 	}
 	return (0);

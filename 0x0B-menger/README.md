@@ -19,7 +19,7 @@ Examples:
 
 Tip: size of a level N menger sponge is calculated as follows: 3^N
 
-'''
+```
 alex@~/0x0B-menger$ cat 0-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -95,4 +95,4 @@ alex@~/0x0B-menger$ ./0-menger 3
 # ## ## ## ## ## ## ## ## #
 ###########################
 alex@~/0x0B-menger$ ./0-menger -1
-'''
+```

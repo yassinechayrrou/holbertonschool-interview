@@ -95,4 +95,5 @@ alex@~/0x0B-menger$ ./0-menger 3
 # ## ## ## ## ## ## ## ## #
 ###########################
 alex@~/0x0B-menger$ ./0-menger -1
+alex@~/0x0B-menger$
 ```

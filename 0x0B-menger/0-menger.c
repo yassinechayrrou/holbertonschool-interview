@@ -6,31 +6,23 @@
 
 void menger(int level)
 {
-	if (level == 0)
-		printf("#\n");
-	if (level == 1)
-	{
-		drawBox();
-	}
-}
+	int boxSize;
+	int center;
 
-void drawBox()
-{
-	char  *box = "#";
-	int level = 1;
-
-	if (level == 1)
+	boxSize = pow(3, level);
+	center = boxSize / 3;
+	for (int i = 0; i < boxSize; ++i)
 	{
-		for (int i = 0; i < 3; ++i)
+		for (int j = 0; j < boxSize; ++j)
 		{
-			for (int j = 0; j < 3; ++j)
-			{
-				if (j == 1 && i == 1)
-					printf(" ");
-				else
-					printf("%s", box);
-			}
-			printf("\n");
+			if (i % 3 == 1 && j % 3 == 1)
+				printf(" ");
+			else if ( (i >= center && i <= center * 2 - 1) &&
+				   	(j >= center && j <= center * 2 - 1))
+				printf(" ");
+			else
+				printf("#");
 		}
+		printf("\n");
 	}
 }

@@ -17,8 +17,8 @@ void menger(int level)
 		{
 			if (i % 3 == 1 && j % 3 == 1)
 				printf(" ");
-			else if ( (i >= center && i <= center * 2 - 1) &&
-				   	(j >= center && j <= center * 2 - 1))
+			else if ((i >= center && i <= center * 2 - 1) &&
+					(j >= center && j <= center * 2 - 1))
 				printf(" ");
 			else
 				printf("#");

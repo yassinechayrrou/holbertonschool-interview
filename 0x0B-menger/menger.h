@@ -6,5 +6,6 @@
 #include <math.h>
 
 void menger(int level);
+char *drawBox(int i, int j);
 
 #endif /* MENGER_H */

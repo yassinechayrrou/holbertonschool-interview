@@ -7,22 +7,32 @@
 void menger(int level)
 {
 	int boxSize;
-	int center;
 
 	boxSize = pow(3, level);
-	center = boxSize / 3;
 	for (int i = 0; i < boxSize; ++i)
 	{
 		for (int j = 0; j < boxSize; ++j)
 		{
-			if (i % 3 == 1 && j % 3 == 1)
-				printf(" ");
-			else if ((i >= center && i <= center * 2 - 1) &&
-					(j >= center && j <= center * 2 - 1))
-				printf(" ");
-			else
-				printf("#");
+			printf("%s", drawBox(i, j));
 		}
 		printf("\n");
 	}
+}
+
+/**
+ * drawBox - sets character to print
+ * @i: takes integer
+ * @j: takes integer
+ * Return: "#" or " "
+ */
+char *drawBox(int i, int j)
+{
+	int k, l;
+
+	for (k = i, l = j; k && l; k = k / 3, l = l / 3)
+	{
+		if (k % 3 == 1 && l % 3 == 1)
+			return (" ");
+	}
+	return ("#");
 }

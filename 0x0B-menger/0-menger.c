@@ -6,12 +6,13 @@
 
 void menger(int level)
 {
+	int i, j;
 	int boxSize;
 
 	boxSize = pow(3, level);
-	for (int i = 0; i < boxSize; ++i)
+	for (i = 0; i < boxSize; ++i)
 	{
-		for (int j = 0; j < boxSize; ++j)
+		for (j = 0; j < boxSize; ++j)
 		{
 			printf("%s", drawBox(i, j));
 		}

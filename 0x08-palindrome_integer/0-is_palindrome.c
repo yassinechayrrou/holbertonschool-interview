@@ -6,13 +6,13 @@
  */
 int is_palindrome(unsigned long n)
 {
-	int i, j, len;
+	int i, len;
 	char buffer[sizeof(unsigned long) * 8 + 1];
 
 	len = strlen(yassineItoa(n, buffer));
-	for (i = 0, j = len - 1; i < len / 2; ++i, --j)
+	for (i = 0; i < len / 2; ++i)
 	{
-		if (buffer[i] != buffer[j])
+		if (buffer[i] != buffer[len - 1 - i])
 			return (0);
 	}
 	return (1);

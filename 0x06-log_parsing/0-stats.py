@@ -31,14 +31,17 @@ if __name__ == "__main__":
             setDict(word[7])
             if counter % 10 == 0:
                 print("File size: {}".format(fileSize))
-                for k, v in Dict.items():
+                for k, v in sorted(Dict.items()):
                     if v:
                         print("{}: {}".format(k, v))
         print("File size: {}".format(fileSize))
-        for k, v in Dict.items():
+        for k, v in sorted(Dict.items()):
             if v:
                 print("{}: {}".format(k, v))
         Dict = {}
 
     except keyboardInterrupt:
+        for k, v in sorted(Dict.items()):
+            if v:
+                print("{}: {}".format(k, v))
         raise

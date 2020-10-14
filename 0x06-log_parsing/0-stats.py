@@ -27,8 +27,11 @@ if __name__ == "__main__":
         for line in sys.stdin:
             counter += 1
             word = line.split(" ")
-            fileSize += int(word[8])
-            setDict(word[7])
+            try:
+                fileSize += int(word[-1])
+                setDict(word[-2])
+            except BaseException:
+                pass
             if counter % 10 == 0:
                 print("File size: {}".format(fileSize))
                 for k, v in sorted(Dict.items()):
@@ -38,7 +41,6 @@ if __name__ == "__main__":
         for k, v in sorted(Dict.items()):
             if v:
                 print("{}: {}".format(k, v))
-        Dict = {}
 
     except keyboardInterrupt:
         for k, v in sorted(Dict.items()):

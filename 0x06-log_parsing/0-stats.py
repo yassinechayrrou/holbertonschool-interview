@@ -32,8 +32,8 @@ if __name__ == "__main__":
             if counter % 10 == 0:
                 print("File size: {}".format(fileSize))
                 for k, v in Dict.items():
-                    print("{}: {}".format(k, v))
-                for key in Dict.keys():
-                    Dict[key] = 0
+                    if v:
+                        print("{}: {}".format(k, v))
+                Dict = {}
     except keyboardInterrupt:
         raise("this is error")

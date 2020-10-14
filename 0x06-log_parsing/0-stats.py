@@ -35,5 +35,10 @@ if __name__ == "__main__":
                     if v:
                         print("{}: {}".format(k, v))
                 Dict = {}
+        print("File size: {}".format(fileSize))
+        for k, v in Dict.items():
+            if v:
+                print("{}: {}".format(k, v))
+
     except keyboardInterrupt:
-        raise("this is error")
+        raise

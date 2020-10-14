@@ -34,11 +34,11 @@ if __name__ == "__main__":
                 for k, v in Dict.items():
                     if v:
                         print("{}: {}".format(k, v))
-                Dict = {}
         print("File size: {}".format(fileSize))
         for k, v in Dict.items():
             if v:
                 print("{}: {}".format(k, v))
+        Dict = {}
 
     except keyboardInterrupt:
         raise

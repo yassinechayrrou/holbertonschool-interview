@@ -11,7 +11,7 @@ def validUTF8(data):
     for i in range(len(data)):
         number = data[i]
         if number >= 255:
-            return 'false'
+            return False
         elif number & 128 == 0:
             bytesNumber = 1
         elif number & 224 == 192:
@@ -21,11 +21,11 @@ def validUTF8(data):
         elif number & 248 == 240:
             bytesNumber = 4
         else:
-            return 'false'
+            return False
         for c in range(1, bytesNumber):
             if i + c >= len(data):
-                return 'false'
+                return False
             elif data[i + c] & 197 != 128:
-                return 'false'
+                return False
         i = i + bytesNumber - 1
-    return 'true'
+    return True

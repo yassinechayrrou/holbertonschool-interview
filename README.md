@@ -1,2 +1,3 @@
 # holbertonschool-interview
-Contains answers to interview challenges
+
+A set of coding interview challenges with their respective solutions

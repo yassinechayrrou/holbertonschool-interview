@@ -6,9 +6,8 @@ const URL = 'https://swapi-api.hbtn.io/api/films/';
 const movieID = process.argv[2];
 const Req = URL + movieID;
 
-if (!movieID) {
-    process.exit()
-}
+if (!movieID) { process.exit(); }
+
 async function callback (err, res, body) {
   if (err) {
     return console.log(err);

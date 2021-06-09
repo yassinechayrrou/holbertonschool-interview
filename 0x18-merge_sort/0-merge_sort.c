@@ -1,8 +1,8 @@
 #include "sort.h"
 
 /**
- * merge - merges left and right splits of an array 
- * @array: pointer to integer
+ * merge - merges left and right splits of an array
+ * @array: pointer to first element in array
  * @right_array: right subarry of array
  * @left_array: left subarry of array
  * @size: size of array.

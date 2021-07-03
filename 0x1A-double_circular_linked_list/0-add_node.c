@@ -54,6 +54,9 @@ List *add_node_begin(List **list, char *str)
 
 	newNode = malloc(sizeof(List));
 
+	if (!newNode)
+		return (NULL);
+
 	newNode->str = strdup(str);
 
 	if (!newNode->str)

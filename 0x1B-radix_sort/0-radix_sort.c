@@ -24,7 +24,7 @@ int num_len_digit(int *array, size_t size)
  */
 void radix_sort(int *array, size_t size)
 {
-	int B[10][10], B_cnt[10];
+	int B[100][100], B_cnt[100];
 	int i, j, k, r, max_digit_num, divisor = 1, pass;
 
 	if (!array || size < 2)
@@ -33,7 +33,7 @@ void radix_sort(int *array, size_t size)
 	max_digit_num = num_len_digit(array, size);
 	for (pass = 0; pass < max_digit_num; pass++)
 	{
-		for (i = 0; i < 10; i++)
+		for (i = 0; i < 100; i++)
 			B_cnt[i] = 0;
 
 		for (i = 0; i < (int)size; i++)
@@ -43,7 +43,7 @@ void radix_sort(int *array, size_t size)
 			B_cnt[r] += 1;
 		}
 		i = 0;
-		for (k = 0; k < 10; k++)
+		for (k = 0; k < 100; k++)
 		{
 			for (j = 0; j < B_cnt[k]; j++)
 			{

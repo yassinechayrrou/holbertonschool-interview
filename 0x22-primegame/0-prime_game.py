@@ -19,7 +19,7 @@ def isWinner(x, nums):
         prime[i] = k
     results = True if prime[max(nums)] % 2 == 0 else False
     #if prime[max(nums)] % 2 == 0:
-    return "Ben" if not results else "Maria"
+    return "Ben" if results else "Maria"
     #else:
     #    return "Maria"
     return None

@@ -26,10 +26,18 @@ int regex_match(char const *str, char const *pattern)
 	}
 
 	if (dot && star)
+	{
+
 		return (regex_match(str + 1, pattern) || regex_match(str, pattern + 2));
+	}
 	if (dot && !star)
+	{
+
 		return (regex_match(str + 1, pattern + 1));
+	}
 	if (star)
+	{
 		return (regex_match(str, pattern + 2));
+	}
 	return (0);
 }

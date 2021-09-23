@@ -3,12 +3,13 @@
 
 
 def pascal_triangle(n):
-    """
-    returns pascal triangle of given number n
+    """ returns pascal triangle of given number n
     """
     triangle = []
+
     if n <= 0:
-        return triangle 
+        return triangle
+
     for i in range(n):
         row = [1]
         if triangle:
@@ -17,4 +18,4 @@ def pascal_triangle(n):
             row.extend(computed_row)
             row.append(1)
         triangle.append(row)
-    return (triangle)
+    return triangle

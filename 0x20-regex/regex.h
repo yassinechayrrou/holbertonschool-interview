@@ -2,9 +2,8 @@
 #define _REGEX_H_
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <regex.h>
+#include <stdlib.h>
 
 int regex_match(char const *str, char const *pattern);
 

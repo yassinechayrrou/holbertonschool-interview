@@ -18,10 +18,12 @@ int regex_match(char const *str, char const *pattern)
 	star = *(pattern + 1) == '*';
 
 	if (!*str && !star)
+	{
 		if (*pattern)
 			return (0);
 		else
 			return (1);
+	}
 
 	if (dot && star)
 		return (regex_match(str + 1, pattern) || regex_match(str, pattern + 2));

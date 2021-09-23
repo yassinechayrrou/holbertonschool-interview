@@ -1,11 +1,9 @@
 #include "holberton.h"
 /**
- *
- * wildcmp - compares two strings
- *@s1: pointer to char 
- *@s2 pointer to char 
+ *wildcmp - compares two strings together
+ *@s1: pointer to character
+ *@s2: pointer to charcter
  *Return: 1 if strings are considered identical else returns 0
- *
  */
 int wildcmp(char *s1, char *s2)
 {

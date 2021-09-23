@@ -4,6 +4,7 @@
 def isWinner(x, nums):
     """ Returns prime game winner
     """
+
     if not nums or x < 1:
         return None
 
@@ -18,8 +19,4 @@ def isWinner(x, nums):
                 p[j] = 1
         prime[i] = k
     results = True if prime[max(nums)] % 2 == 0 else False
-    #if prime[max(nums)] % 2 == 0:
     return "Ben" if results else "Maria"
-    #else:
-    #    return "Maria"
-    return None

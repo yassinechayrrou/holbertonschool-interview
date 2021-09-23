@@ -14,7 +14,6 @@ int regex_match(char const *str, char const *pattern)
 	if (!pattern || !str)
 		return (0);
 
-	/*
 	dot = *str && (*str == *pattern || *pattern == '.');
 	star = *(pattern + 1) == '*';
 
@@ -31,6 +30,4 @@ int regex_match(char const *str, char const *pattern)
 	if (star)
 		return (regex_match(str, pattern + 2));
 	return (0);
-	*/
-	return (1);
 }

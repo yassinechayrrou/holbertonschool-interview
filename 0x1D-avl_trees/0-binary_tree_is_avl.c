@@ -13,8 +13,16 @@ size_t height(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (-1);
 
-	l_height = tree->left ? 1 + height(tree->left) : 0;
-	r_height = tree->right ? 1 + height(tree->right) : 0;
+	/* l_height = tree->left ? 1 + height(tree->left) : 0; */
+	if (tree->left)
+		l_height = 1 + height(tree->left);
+	else
+		l_height = 0;
+	/* r_height = tree->right ? 1 + height(tree->right) : 0; */
+	if (r_height)
+		r_height = 1 + height(tree->right);
+	else
+		r_height = 0;
 
 	return (l_height > r_height ? l_height : r_height);
 }
@@ -35,14 +43,13 @@ int balance(const binary_tree_t *tree)
 
 	left = height(tree->left);
 	right = height(tree->right);
-	return (abs(left - right) <= 1
-		&& balance(tree->left)
-		&& balance(tree->right));
+	return (abs(left - right) <= 1 && balance(tree->left)
+			&& balance(tree->right));
 }
 
 
 /**
- * is_binary_search_tree - checks if is binary search tree helper function
+ * is_binary_search_tree - checks if is binary search tree [helper function]
  * @node: binary tree root node
  * @min: min in the left subtree
  * @max: max in the right subtree
@@ -85,7 +92,7 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 {
 	int bst, blc;
 
-	if (!tree)
+	if (tree == NULL)
 		return (0);
 
 	bst = binary_tree_is_bst(tree);

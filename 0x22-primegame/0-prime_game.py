@@ -18,12 +18,10 @@ def calc_primes(n, primes):
             else:
                 primes.append(0)
 
-
 def isWinner(x, nums):
     """
     returns the name of player that won
     """
-
     players_wins = {"Maria": 0, "Ben": 0}
 
     primes = [0, 0, 2]
@@ -32,7 +30,7 @@ def isWinner(x, nums):
 
     for round in range(x):
         sum_options = sum((i != 0 and i <= nums[round])
-                          for i in primes[:nums[round] + 1])
+                for i in primes[:nums[round] + 1])
 
         if (sum_options % 2):
             winner = "Maria"

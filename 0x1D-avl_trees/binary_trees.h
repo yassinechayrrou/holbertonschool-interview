@@ -24,7 +24,7 @@ struct binary_tree_s
 typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s avl_t;
 
-int balance(const binary_tree_t *tree);
+int balance_factor(const binary_tree_t *tree);
 int binary_tree_is_avl(const binary_tree_t *tree);
 int is_binary_search_tree(binary_tree_t *node, int min, int max);
 int binary_tree_is_bst(const binary_tree_t *tree);
